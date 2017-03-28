@@ -8,12 +8,24 @@ class BinVersionCheckTest extends TestCase
 {
     public function testNoErrorWhenTheRangeSatisfiesTheBinVersion()
     {
-        BinVersionCheck::check('curl', '>=1');
+        $exception = null;
+
+        try {
+            BinVersionCheck::check('curl', '>=1');
+        } catch (\Exception $exception) {}
+
+        $this->assertNull($exception, 'Unexpected Exception');
     }
 
     public function testNoErrorWhenTheRangeSatisfiesTheBinVersionAndOutputHaveMultipleVersions()
     {
-        BinVersionCheck::check('php ' . __DIR__ . '/fixtures/test.php', '>=5');
+        $exception = null;
+
+        try {
+            BinVersionCheck::check('php ' . __DIR__ . '/fixtures/test.php', '>=5');
+        } catch (\Exception $exception) {}
+
+        $this->assertNull($exception, 'Unexpected Exception');
     }
 
     public function testErrorIfBinIsNotString()
@@ -54,12 +66,18 @@ class BinVersionCheckTest extends TestCase
 
     public function testWhenOutputNotContainVersionsAndSetSafe()
     {
-        BinVersionCheck::check(
-            'php ' . __DIR__ . '/fixtures/no-version.php',
-            '>=5',
-            [
-                'safe' => true
-            ]
-        );
+        $exception = null;
+
+        try {
+            BinVersionCheck::check(
+                'php ' . __DIR__ . '/fixtures/no-version.php',
+                '>=5',
+                [
+                    'safe' => true
+                ]
+            );
+        } catch (\Exception $exception) {}
+
+        $this->assertNull($exception, 'Unexpected Exception');
     }
 }
