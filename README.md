@@ -24,7 +24,7 @@ Coming soon
 
 ## Related
 
-- [bin-version-check](https://github.com/sindresorhus/bin-version-check) - Thanks you for inspiration.
+-   [bin-version-check](https://github.com/sindresorhus/bin-version-check) - Thanks you for inspiration.
 
 ## Contribution
 
