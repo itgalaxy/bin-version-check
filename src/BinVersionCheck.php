@@ -1,5 +1,5 @@
 <?php
-namespace BinVersionCheck;
+namespace Itgalaxy\BinVersionCheck;
 
 use Composer\Semver\Semver;
 

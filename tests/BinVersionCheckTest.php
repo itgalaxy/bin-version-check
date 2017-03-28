@@ -1,7 +1,7 @@
 <?php
-namespace BinVersionCheck\Tests;
+namespace Itgalaxy\BinVersionCheck\Tests;
 
-use BinVersionCheck\BinVersionCheck;
+use Itgalaxy\BinVersionCheck\BinVersionCheck;
 use PHPUnit\Framework\TestCase;
 
 class BinVersionCheckTest extends TestCase
